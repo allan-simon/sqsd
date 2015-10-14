@@ -1,0 +1,146 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"canonical": "github.com/aws/aws-sdk-go/aws",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/aws",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/aws/awserr",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/aws/awserr",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/aws/awsutil",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/aws/awsutil",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/aws/corehandlers",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/aws/corehandlers",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/aws/credentials",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/aws/credentials",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/aws/credentials/ec2rolecreds",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/aws/credentials/ec2rolecreds",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/aws/defaults",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/aws/defaults",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/aws/ec2metadata",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/aws/ec2metadata",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/aws/request",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/aws/request",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/aws/service",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/aws/service",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/aws/service/serviceinfo",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/aws/service/serviceinfo",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/internal/endpoints",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/internal/endpoints",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/internal/protocol/query",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/internal/protocol/query",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/internal/protocol/query/queryutil",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/internal/protocol/query/queryutil",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/internal/protocol/rest",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/internal/protocol/rest",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/internal/protocol/xml/xmlutil",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/internal/protocol/xml/xmlutil",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/internal/signer/v4",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/internal/signer/v4",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/aws/aws-sdk-go/service/sqs",
+			"comment": "",
+			"local": "vendor/github.com/aws/aws-sdk-go/service/sqs",
+			"revision": "308eaa65c0ddf03c701d511b7d73b3f3620452a1",
+			"revisionTime": "2015-10-12T14:46:15-07:00"
+		},
+		{
+			"canonical": "github.com/codegangsta/cli",
+			"comment": "",
+			"local": "vendor/github.com/codegangsta/cli",
+			"revision": "bca61c476e3c752594983e4c9bcd5f62fb09f157",
+			"revisionTime": "2015-07-11T14:54:04-07:00"
+		},
+		{
+			"canonical": "github.com/vaughan0/go-ini",
+			"comment": "",
+			"local": "vendor/github.com/vaughan0/go-ini",
+			"revision": "a98ad7ee00ec53921f08832bc06ecf7fd600e6a1",
+			"revisionTime": "2013-09-23T16:52:12+02:00"
+		}
+	]
+}

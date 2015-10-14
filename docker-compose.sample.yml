@@ -1,0 +1,21 @@
+sqsd:
+  restart: always
+  tty: true
+  image: dispatch/sqsd
+  links:
+  - elasticmq:queue
+  - mycoolworker:worker
+  stdin_open: true
+  environment:
+    - AWS_DEFAULT_REGION=us-east-1
+    - QUEUE_URL=http://localhost:9324/queue/test-queue
+    - ELASTIC=true
+    - AWS_ACCESS_KEY_ID=AAAAAAAAAAAAAAAAAAAA
+    - AWS_SECRET_ACCESS_KEY=UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+elasticmq:
+  restart: always
+  tty: true
+  image: behance/elasticmq-docker
+mycoolworker:
+  restart: always
+  image: mycompany/myworker
