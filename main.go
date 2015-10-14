@@ -142,12 +142,6 @@ func main() {
 			}
 		}
 
-		// Just to test...
-		log.Println(client.SendMessage(&sqs.SendMessageInput{
-			MessageBody: aws.String(`{"foo":"bar"}`),
-			QueueUrl:    aws.String(workerConfig.queueUrl),
-		}))
-
 		work()
 
 	}
