@@ -40,3 +40,5 @@ GLOBAL OPTIONS:
 
 ### With Docker
 See the [sample docker-compose](docker-compose.sample.yml) file.
+
+Image is automatically built on push to `dispatch/sqsd:latest`
