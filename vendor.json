@@ -136,6 +136,13 @@
 			"revisionTime": "2015-07-11T14:54:04-07:00"
 		},
 		{
+			"canonical": "github.com/pagerduty/godspeed",
+			"comment": "",
+			"local": "vendor/github.com/pagerduty/godspeed",
+			"revision": "d940a26b3aedd5752c2518b873f5cbd67ef459fb",
+			"revisionTime": "2015-09-22T01:16:53-07:00"
+		},
+		{
 			"canonical": "github.com/vaughan0/go-ini",
 			"comment": "",
 			"local": "vendor/github.com/vaughan0/go-ini",

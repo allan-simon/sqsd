@@ -5,8 +5,10 @@ import (
 	"errors"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/sqs"
+	"io"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 	"time"
 )
@@ -87,6 +89,9 @@ func deleteMessage(msg *sqs.Message) error {
 }
 
 func (Worker) handleMessage(msg *sqs.Message) error {
+	if StatsEnabled {
+		StatsClient.Incr("received", nil, nil)
+	}
 	client := http.Client{
 		Timeout: time.Duration(time.Duration(workerConfig.timeout) * time.Second),
 	}
@@ -100,10 +105,18 @@ func (Worker) handleMessage(msg *sqs.Message) error {
 	if err != nil {
 		return err
 	}
+	defer response.Body.Close()
 
 	if response.StatusCode > 299 || response.StatusCode < 200 {
+		if StatsEnabled {
+			StatsClient.Incr("error", []string{response.Status}, nil)
+		}
+		io.Copy(os.Stdout, response.Body)
 		return errors.New("Host returned error status (" + response.Status + ")")
 	} else {
+		if StatsEnabled {
+			StatsClient.Incr("success", nil, nil)
+		}
 		return nil
 	}
 }

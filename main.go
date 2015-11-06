@@ -97,6 +97,14 @@ func main() {
 
 	app.Action = func(c *cli.Context) {
 
+		// If we are linked to a datadog container, initialize stats
+		if len(os.Getenv("DATADOG_PORT_8125_UDP_ADDR")) > 0 {
+			err := InitStats()
+			if err != nil {
+				log.Fatal(err)
+			}
+		}
+
 		workerConfig = config{
 			queueUrl:        c.String("queue"),
 			deadQueueUrl:    c.String("deadQueue"),
