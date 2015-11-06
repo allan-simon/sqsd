@@ -89,6 +89,7 @@ func deleteMessage(msg *sqs.Message) error {
 }
 
 func (Worker) handleMessage(msg *sqs.Message) error {
+	now := time.Now()
 	if StatsEnabled {
 		go StatsClient.Incr("received", nil)
 	}
@@ -107,6 +108,11 @@ func (Worker) handleMessage(msg *sqs.Message) error {
 	}
 	defer response.Body.Close()
 
+	defer func() {
+		// Get difference in milliseconds
+		diff := (time.Now().UnixNano() - now.UnixNano()) / 1000000
+		go StatsClient.Histogram("response_time", diff, nil)
+	}()
 	if response.StatusCode > 299 || response.StatusCode < 200 {
 		if StatsEnabled {
 			go StatsClient.Incr("error", []string{response.Status})
@@ -115,7 +121,7 @@ func (Worker) handleMessage(msg *sqs.Message) error {
 		return errors.New("Host returned error status (" + response.Status + ")")
 	} else {
 		if StatsEnabled {
-			go StatsClient.Incr("success")
+			go StatsClient.Incr("success", nil)
 		}
 		return nil
 	}
