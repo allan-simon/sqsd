@@ -90,7 +90,7 @@ func deleteMessage(msg *sqs.Message) error {
 
 func (Worker) handleMessage(msg *sqs.Message) error {
 	if StatsEnabled {
-		StatsClient.Incr("received", nil, nil)
+		go StatsClient.Incr("received", nil)
 	}
 	client := http.Client{
 		Timeout: time.Duration(time.Duration(workerConfig.timeout) * time.Second),
@@ -109,13 +109,13 @@ func (Worker) handleMessage(msg *sqs.Message) error {
 
 	if response.StatusCode > 299 || response.StatusCode < 200 {
 		if StatsEnabled {
-			StatsClient.Incr("error", []string{response.Status}, nil)
+			go StatsClient.Incr("error", []string{response.Status})
 		}
 		io.Copy(os.Stdout, response.Body)
 		return errors.New("Host returned error status (" + response.Status + ")")
 	} else {
 		if StatsEnabled {
-			StatsClient.Incr("success", nil, nil)
+			go StatsClient.Incr("success")
 		}
 		return nil
 	}

@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-var StatsClient *godspeed.AsyncGodspeed
+var StatsClient *godspeed.Godspeed
 
 var StatsEnabled = false
 
@@ -19,7 +19,7 @@ func InitStats() error {
 	if err != nil {
 		return err
 	}
-	client, err := godspeed.NewAsync(os.Getenv("DATADOG_PORT_8125_UDP_ADDR"), int(intPort), true)
+	client, err := godspeed.New(os.Getenv("DATADOG_PORT_8125_UDP_ADDR"), int(intPort), true)
 	if err != nil {
 		return err
 	}
