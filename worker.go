@@ -112,7 +112,7 @@ func (Worker) handleMessage(msg *sqs.Message) error {
 		defer func() {
 			// Get difference in milliseconds
 			diff := (time.Now().UnixNano() - now.UnixNano()) / 1000000
-			go StatsClient.Histogram("response_time", diff, nil)
+			go StatsClient.Histogram("response_time", float64(diff), nil)
 		}()
 	}
 	if response.StatusCode > 299 || response.StatusCode < 200 {
